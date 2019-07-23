@@ -1,0 +1,30 @@
+@model NewActivity
+
+<h1>Activity Name: @ViewBag.act.Title</h1>
+<h3>Date:</h3> <h4>@ViewBag.act.ActDate</h4>
+<h3>Time:</h3> <h4>@ViewBag.act.Time</h4>
+@{
+    bool temp = false;
+    foreach(var rando in @ViewBag.act.ActtoUser){   
+            if ( @ViewBag.Userid == @rando.User.UserId){
+            temp = true;
+            }
+        }
+        if (temp ==false){
+            <a href="/joinact/@ViewBag.act.ActivityId/@ViewBag.UserId"><button>Join</button></a>
+        }
+        else{
+            <h2>RSVP Status: <em>You're In</em></h2>
+        }
+}
+
+<h3>Coordinator:</h3> <h4>@ViewBag.theuser.FirstName @ViewBag.theuser.LastName</h4>
+<h3>Description:</h3>
+<h5><p><em>@ViewBag.act.Description</em></p></h5>
+<h3>Participants:</h3>
+<ul>
+    @foreach(var people in ViewBag.act.ActtoUser){
+    <h5><li>@people.User.FirstName @people.User.LastName</li></h5>
+    }
+    
+</ul>

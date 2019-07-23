@@ -1,0 +1,19 @@
+{
+  "FilePath": "c:\\Users\\Sasuke\\Documents\\Coding Dojo\\C#\\ORM\\EntityFramework\\BeltExam\\ActivityCenter\\ActivityCenter.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "ActivityCenter",
+  "Documents": [],
+  "SerializationFormat": "0.1"
+}

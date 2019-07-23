@@ -1,0 +1,34 @@
+﻿@model User
+
+    <div class=>
+        <h1>Registration</h1>
+        <hr>
+        <form asp-action="register" asp-controller="Home" method="POST">
+            <table>
+                <tr>
+                    <td><strong>First Name</strong> <br><span asp-validation-for="FirstName"></span></td>
+                    <td><input type="text" asp-for="FirstName" placeholder="First"></td>
+                </tr>
+                <tr>
+                    <td><strong>Last Name</strong> <br><span asp-validation-for="LastName"></span></td>
+                    <td><input type="text" asp-for="LastName" placeholder="Last"></td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong> <br><span asp-validation-for="Email"></span></td>
+                    <td><input type="text" asp-for="Email" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td><strong>Password -- <em>8 characters long & must have (1) letter,(1) number,(1) special character</em><br></strong><span asp-validation-for="Password"></span></td>
+                    <td><input type="password" asp-for="Password" placeholder="PAssword"></td>
+                </tr>
+                <tr>
+                    <td><strong>Confirm Password</strong> </td>
+                    <td><input type="password" asp-for="ConfirmPassword" placeholder="Confirm"></td>
+                </tr>
+            </table>
+            <input class="bt" type="submit" value="Register">
+        </form>
+    </div>
+    <div>
+        <partial name="Login"/>
+    </div>
